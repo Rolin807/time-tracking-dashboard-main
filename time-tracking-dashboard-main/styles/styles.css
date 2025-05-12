@@ -16,6 +16,8 @@
 
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,10 +30,15 @@ html {
 
 body {
     background-color: var(--Navy-950);
+    display: flex;
+    align-items: center;         
+    justify-content: center;     
+    min-height: 100vh;   
+    
 }
 
 .container {
-
+    height: 100%;
     width: 88%;
     margin: 2rem auto;
 }
@@ -108,6 +115,9 @@ body {
     width: 100%;
     background: no-repeat;
     background-position: 95% top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
 
     .content-card {
@@ -186,3 +196,240 @@ body {
     background-color: var(--Yellow-300);
     background-image:url(../images/icon-self-care.svg) ;
 }
+
+
+  .regular-card:nth-of-type(2) { grid-area: card1; }
+  .regular-card:nth-of-type(3) { grid-area: card2; }
+  .regular-card:nth-of-type(4) { grid-area: card3; }
+  .regular-card:nth-of-type(5) { grid-area: card4; }
+  .regular-card:nth-of-type(6) { grid-area: card5; }
+  .regular-card:nth-of-type(7) { grid-area: card6; }
+
+
+
+
+
+
+
+
+
+/*------------------------------------Media 600px------------------------------------*/
+
+  @media (min-width: 600px ) {
+    .container {
+
+        margin: 0 auto;;
+        gap: 2rem;
+        display: grid;
+ 
+        grid-template-areas:
+          "menu menu"
+          "card1 card2"
+          "card3 card4"
+          "card5 card6";
+      }
+      
+      .menu-card {
+        grid-area: menu;
+    
+      }
+      
+    
+      .regular-card {
+        border-radius: var(--Radius-Borders);
+        background-color: var(--Navy-900);
+        margin-top: 0rem;
+
+    
+    
+        .content-card {
+    
+            .row_1 {
+    
+                .title {
+                    color: white;
+                    font-size: 2rem;
+    
+                }
+    
+                .more {
+                    color: var(--Purple-500);
+                    font-size: 2rem;
+               }
+            }
+    
+            .row_2 {
+                .hours {
+                    color: white;
+                    font-size: 3rem;
+                }
+    
+                .last {
+                    color: var(--Purple-500);
+                    line-height:2.3;
+                    font-size: 1.5rem;
+                }
+            }
+            
+    
+            
+        }
+
+
+        
+    
+      }
+    }
+
+
+
+/*------------------------------------Media 800px------------------------------------*/
+
+  @media (min-width: 800px ) {
+.container {
+    max-width: 1000px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      "menu card1 card2 card3"
+      "menu card4 card5 card6";
+  }
+  
+  .menu-card {
+    grid-area: menu;
+
+
+  }
+  
+
+  .regular-card {
+    border-radius: var(--Radius-Borders);
+    background-color: var(--Navy-900);
+    margin-top: 0rem;
+
+
+
+
+    .content-card {
+
+        .row_1 {
+            margin-bottom: 2rem;
+
+            .title {
+                color: white;
+                font-size: 2rem;
+
+            }
+
+            .more {
+                color: var(--Purple-500);
+                font-size: 2rem;
+           }
+        }
+
+        .row_2 {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .hours {
+                color: white;
+                font-size: 3rem;
+            }
+
+            .last {
+                color: var(--Purple-500);
+                line-height:2.3;
+                font-size: 1.5rem;
+            }
+        }
+        
+
+        
+    }
+
+  }
+
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card-report {
+        background-color: var(--Purple-600);
+        border-radius: 1.6rem;
+
+    
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-end;
+        gap:1.8rem ;
+    
+        img {
+            width: 50%;
+            border: 3px solid white;
+            border-radius: 50%;
+        }
+    
+    
+        .report {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.4rem;
+    
+    
+            p{
+                color: var(--Purple-500);
+                font-size: 1.5rem;
+            }
+    
+            .name {
+                color: white;
+                font-size: 3.4rem;
+                font-weight: 300;
+                margin-bottom: 2rem;
+            }
+        }
+    
+    }
+
+    .menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        align-content: space-between;
+
+        .menu-link {
+            margin-bottom: 1rem;
+            color: var(--Purple-500);
+            font-size: 1.8rem;
+        }
+    }
+}
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
